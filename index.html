@@ -9,6 +9,16 @@
       rel="stylesheet">
 <link rel="stylesheet" href="leaflet-beautify-marker-icon.css">
 <script src="leaflet-beautify-marker-icon.js"></script>  
+ 
+ <script>  
+ 
+  L.marker([-33.882948709789, 151.1914159115681], { icon: L.BeautifyIcon.icon(), draggable: true }).addTo(map).bindPopup("I'm Beautify");
+        var options = {
+            html: '<i class="material-icons">face</i>',
+            iconAnchor: [11, 10]
+        };
+ 
+ </script>
   
 <head>
   <title>DoTheyUseChaiMe</title>
@@ -56,12 +66,7 @@
   L.marker([-33.882948709789, 151.1914159115681]).addTo(map) // EDIT marker coordinates
   .bindPopup("Sappho Books, Cafe & Bar - Does Chai Me!"); // EDIT pop-up text message
   */
-  
- L.marker([-33.882948709789, 151.1914159115681], { icon: L.BeautifyIcon.icon(), draggable: true }).addTo(map).bindPopup("I'm Beautify");
-        var options = {
-            html: '<i class="material-icons">face</i>',
-            iconAnchor: [11, 10]
-        };
+ 
 
   </script>
 </body>
