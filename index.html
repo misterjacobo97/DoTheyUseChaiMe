@@ -4,6 +4,11 @@
   <title>DoTheyUseChaiMe</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
+  
+  <!-- Adding icons from the awesome markers plugin -->
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
+  <link rel="stylesheet" href="css/leaflet.awesome-markers.css">
+  <script src="js/leaflet.awesome-markers.js"></script>
 
   <!-- Load Leaflet code library: see http://leafletjs.com/download.html -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
@@ -24,6 +29,12 @@
 
   <!-- Create the interactive map content with JavaScript (.js) -->
   <script>
+    
+  <!-- creates orange marker -->
+  var OrangeMarker = L.AwesomeMarkers.icon({
+    icon: 'coffee',
+    markerColor: 'orange'
+  });
 
   /* Set up the initial map center and zoom level */
   var map = L.map('map', {
@@ -42,7 +53,7 @@
   }).addTo(map);
 
   /* Display a point marker with pop-up text */
-  L.marker([-33.882948709789, 151.1914159115681]).addTo(map) // EDIT marker coordinates
+  L.marker([-33.882948709789, 151.1914159115681], {icon: OrangeMarker}).addTo(map) // EDIT marker coordinates
   .bindPopup("Sappho Books, Cafe & Bar - Does Chai Me!"); // EDIT pop-up text message
 
   </script>
