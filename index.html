@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
+ 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<link rel="stylesheet" href="leaflet-beautify-marker-icon.css">
+<script src="leaflet-beautify-marker-icon.js"></script>  
+  
 <head>
   <title>DoTheyUseChaiMe</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
-  
-  <!-- Adding icons from the awesome markers plugin -->
-  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
-  <link rel="stylesheet" href="css/leaflet.awesome-markers.css">
-  <script src="js/leaflet.awesome-markers.js"></script>
 
   <!-- Load Leaflet code library: see http://leafletjs.com/download.html -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
@@ -53,7 +55,7 @@
   }).addTo(map);
 
   /* Display a point marker with pop-up text */
-  L.marker([-33.882948709789, 151.1914159115681], {icon: OrangeMarker}).addTo(map) // EDIT marker coordinates
+  L.marker([-33.882948709789, 151.1914159115681]).addTo(map) // EDIT marker coordinates
   .bindPopup("Sappho Books, Cafe & Bar - Does Chai Me!"); // EDIT pop-up text message
 
   </script>
