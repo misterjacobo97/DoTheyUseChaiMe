@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+
+<link href="leaflet/leaflet.css" rel="stylesheet">
+<script src="leaflet/leaflet.js"></script>
  
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -57,6 +60,15 @@
   /* Display a point marker with pop-up text */
   L.marker([-33.882948709789, 151.1914159115681]).addTo(map) // EDIT marker coordinates
   .bindPopup("Sappho Books, Cafe & Bar - Does Chai Me!"); // EDIT pop-up text message
+   
+Does = {
+    icon: 'leaf',
+    iconShape: 'marker'
+};
+L.marker([-33.882948709789, 151.1914159115681], {
+    icon: L.BeautifyIcon.icon(Does),
+    draggable: false
+}).addTo(map).bindPopup("Sappho Books, Cafe & Bar - Does Chai Me!").bindPopup("Sappho Books, Cafe & Bar - Does Chai Me!");
 
   </script>
 </body>
