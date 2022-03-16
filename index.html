@@ -57,14 +57,11 @@
   .bindPopup("Sappho Books, Cafe & Bar - Does Chai Me!"); // EDIT pop-up text message
   */
   
-options = {
-    icon: 'leaf',
-    iconShape: 'marker'
-};
-L.marker([-33.882948709789, 151.1914159115681], {
-    icon: L.BeautifyIcon.icon(options),
-    draggable: false
-}).addTo(map).bindPopup("Sappho Books, Cafe & Bar - Does Chai Me!").bindPopup("Sappho Books, Cafe & Bar - Does Chai Me!");
+ L.marker([-33.882948709789, 151.1914159115681], { icon: L.BeautifyIcon.icon(), draggable: true }).addTo(map).bindPopup("I'm Beautify");
+        var options = {
+            html: '<i class="material-icons">face</i>',
+            iconAnchor: [11, 10]
+        };
 
   </script>
 </body>
