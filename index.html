@@ -26,26 +26,8 @@
   <!-- Create the interactive map content with JavaScript (.js) -->
   <script>
     
-    /* display basemap tiles -- see others at https://leaflet-extras.github.io/leaflet-providers/preview/ */
-  
     
   
-
-  /* Set up the initial map center and zoom level */
-  var map = L.map('map', {
-    center: [-33.87196108839124, 151.21093596711813], // EDIT coordinates to re-center map
-    zoom: 13,  // EDIT from 1 (zoomed out) to 18 (zoomed in)
-    scrollWheelZoom: false,
-    tap: false
-  });
-    
-  L.tileLayer(
-    'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-      attribution: '&copy; <a href="https://osm.org/copyright">\
-        OpenStreetMap</a> contributors, &copy;\
-        <a href="https://carto.com/attribution">CARTO</a>'
-  }).addTo(map);
-    
   /* Layer for they use chai */
   var Sapphos = L.marker([3-33.882948709789, 151.1914159115681]).bindPopup("Sappho Books, Cafe & Bar - Does Chai Me!"),
       RomoloPittSt = L.marker([-33.868925740936255, 151.20771357624943]).bindPopup("Romolo Espresso Cucina Pitt St - Does Chai Me!"),
@@ -57,7 +39,26 @@
     
   var overlayMaps = {
     "Does Chai Me!": DoesChaiMe
-  };
+  };  
+  
+
+  /* Set up the initial map center and zoom level */
+  var map = L.map('map', {
+    center: [-33.87196108839124, 151.21093596711813], // EDIT coordinates to re-center map
+    zoom: 13,  // EDIT from 1 (zoomed out) to 18 (zoomed in)
+    scrollWheelZoom: false,
+    tap: false,
+    layers: [DoesChaiMe]
+  });
+    
+  /* display basemap tiles -- see others at https://leaflet-extras.github.io/leaflet-providers/preview/ */
+  L.tileLayer(
+    'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+      attribution: '&copy; <a href="https://osm.org/copyright">\
+        OpenStreetMap</a> contributors, &copy;\
+        <a href="https://carto.com/attribution">CARTO</a>'
+  }).addTo(map);
+
     
   L.control.layers(overlayMaps).addTo(map);
 
