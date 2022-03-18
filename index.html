@@ -27,7 +27,13 @@
   <script>
     
     
-  
+  /* Layer for they dont use chai */
+  var placeholder = L.marker([-33.882948709789, 151.1914159115681]).bindPopup("Sappho Books, Cafe & Bar - Does Chai Me!");
+    
+  var DoesNotDoChaiMe = L.layerGroup(
+    [placeholder]
+  );
+    
   /* Layer for they use chai */
   var Sapphos = L.marker([-33.882948709789, 151.1914159115681]).bindPopup("Sappho Books, Cafe & Bar - Does Chai Me!"),
       RomoloPittSt = L.marker([-33.868925740936255, 151.20771357624943]).bindPopup("Romolo Espresso Cucina Pitt St - Does Chai Me!"),
@@ -39,7 +45,8 @@
   );
     
   var overlayMaps = {
-    "Does Chai Me!": DoesChaiMe
+    "Does Chai Me!": DoesChaiMe,
+    "Does Other Vegan Option!" = DoesNotDoChaiMe
   };  
   
 
