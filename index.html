@@ -8,18 +8,8 @@
       rel="stylesheet">
 <link rel="stylesheet" href="leaflet-beautify-marker-icon.css">
 <script src="leaflet-beautify-marker-icon.js"></script>  
- 
- <script>  
- 
-  L.marker([-33.882948709789, 151.1914159115681], { icon: L.BeautifyIcon.icon(), draggable: true }).addTo(map).bindPopup("I'm Beautify");
-        var options = {
-            html: '<i class="material-icons">face</i>',
-            iconAnchor: [11, 10]
-        };
- 
- </script>
   
-<head>
+ <head>
  
  
   <title>DoTheyUseChaiMe</title>
@@ -39,8 +29,9 @@
   #map { position: absolute; top:0; bottom:0; right:0; left:0; }
   #map-title { position: relative; margin-top: 10px; margin-left: 50px; float: left; background: white; border: 2px solid rgba(0,0,0,0.2); padding: 6px 8px; font-family: Helvetica; font-weight: bold; font-size: 24px; z-index: 800; }
   </style>
-</head>
-<body>
+ </head>
+ 
+ <body>
 
   <!-- Display the map and title with HTML division tags  -->
   <div id="map-title">Do They Use Chai Me Map</div>
@@ -70,8 +61,16 @@
   L.marker([-33.882948709789, 151.1914159115681]).addTo(map) // EDIT marker coordinates
   .bindPopup("Sappho Books, Cafe & Bar - Does Chai Me!"); // EDIT pop-up text message
   */
+   
+ 
+  L.marker([-33.882948709789, 151.1914159115681], { icon: L.BeautifyIcon.icon(), draggable: true }).addTo(map).bindPopup("I'm Beautify");
+        var options = {
+            html: '<i class="material-icons">face</i>',
+            iconAnchor: [11, 10]
+        };
+
  
 
   </script>
-</body>
+ </body>
 </html>
