@@ -27,6 +27,18 @@
   <script>
     
     /* display basemap tiles -- see others at https://leaflet-extras.github.io/leaflet-providers/preview/ */
+  
+    
+  
+
+  /* Set up the initial map center and zoom level */
+  var map = L.map('map', {
+    center: [-33.87196108839124, 151.21093596711813], // EDIT coordinates to re-center map
+    zoom: 13,  // EDIT from 1 (zoomed out) to 18 (zoomed in)
+    scrollWheelZoom: false,
+    tap: false
+  });
+    
   L.tileLayer(
     'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
       attribution: '&copy; <a href="https://osm.org/copyright">\
@@ -42,14 +54,6 @@
   var DoesChaiMe = L.layerGroup(
     [Sapphos, RomoloPittSt, BourkeStBarangaroo]
   );
-
-  /* Set up the initial map center and zoom level */
-  var map = L.map('map', {
-    center: [-33.87196108839124, 151.21093596711813], // EDIT coordinates to re-center map
-    zoom: 13,  // EDIT from 1 (zoomed out) to 18 (zoomed in)
-    scrollWheelZoom: false,
-    tap: false
-  });
     
   var overlayMaps = {
     "Does Chai Me!": DoesChaiMe
