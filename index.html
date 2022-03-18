@@ -25,6 +25,15 @@
 
   <!-- Create the interactive map content with JavaScript (.js) -->
   <script>
+    
+  <!-- Layer for they use chai -->
+  var Sapphos = L.marker([3-33.882948709789, 151.1914159115681]).bindPopup("Sappho Books, Cafe & Bar - Does Chai Me!"),
+      RomoloPittSt = L.marker([-33.868925740936255, 151.20771357624943]).bindPopup("Romolo Espresso Cucina Pitt St - Does Chai Me!"),
+      BourkeStBarangaroo  = L.marker([-33.86435381387368, 151.20142669807498]).bindPopup("Bourke St Barangaroo - Does Chai Me!");
+    
+  var DoesChaiMe = L.layerGroup(
+    [Sapphos, RomoloPittSt, BourkeStBarangaroo]
+  );
 
   /* Set up the initial map center and zoom level */
   var map = L.map('map', {
@@ -41,11 +50,15 @@
         OpenStreetMap</a> contributors, &copy;\
         <a href="https://carto.com/attribution">CARTO</a>'
   }).addTo(map);
+    
+  var overlayMaps = {
+    "Does Chai Me!": DoesChaiMe
+  };
 
-  /* Display a point marker with pop-up text */
-  L.marker([-33.882948709789, 151.1914159115681]).addTo(map) // EDIT marker coordinates
+  /* Display a point marker with pop-up text
+  L.marker([]).addTo(map) // EDIT marker coordinates
   .bindPopup("Sappho Books, Cafe & Bar - Does Chai Me!"); // EDIT pop-up text message
-
+  */
 
  
 
