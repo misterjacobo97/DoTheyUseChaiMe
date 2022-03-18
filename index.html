@@ -58,6 +58,8 @@
   var overlayMaps = {
     "Does Chai Me!": DoesChaiMe
   };
+    
+  L.control.layers(overlayMaps).addTo(map);
 
   /* Display a point marker with pop-up text
   L.marker([]).addTo(map) // EDIT marker coordinates
