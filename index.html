@@ -28,10 +28,11 @@
     
     
   /* Layer for they dont use chai */
-  var placeholder = L.marker([-33.8823661, 151.1901281]).bindPopup("Sappho Books, Cafe & Bar - Does Chai Me!");
+  var OhMyDays = L.marker([-33.88226770573398, 151.19015070768268]).bindPopup("Oh My Days Cafe - Other Vegan Option"),
+      LilypadSydney = L.marker([-33.88360595953672, 151.19162860482174]).bindPopup("Lilypad Cafe Sydney - Other Vegan Option");
     
   var DoesNotDoChaiMe = L.layerGroup(
-    [placeholder]
+    [OhMYDays, LilypadSydney]
   );
     
   /* Layer for they use chai */
