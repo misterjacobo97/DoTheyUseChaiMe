@@ -10,12 +10,18 @@
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
   <!-- Position the map and title with Cascading Style Sheet (CSS) -->
+   
+  
   <style>
+  
   body { margin:0; padding:0; }
   #map { position: absolute; top:0; bottom:0; right:0; left:0; }
   #map-title { position: relative; margin-top: 10px; margin-left: 25%; float: left; background: white; border: 2px solid rgba(0,0,0,0.2); padding: 6px 8px; font-family: Helvetica; font-weight: bold; font-size: 50%; z-index: 800; }
+
+  img.huechange { filter: hue-rotate(120deg); }
+   
   </style>
- </head>
+  </head>
  
  <body>
 
@@ -25,7 +31,11 @@
 
   <!-- Create the interactive map content with JavaScript (.js) -->
   <script>
-    
+
+  /* Changes colour of markers */
+  var marker = L.marker([y, x]).addTo(map);
+  marker._icon.classList.add("huechange");
+
     
   /* Layer for they dont use chai */
   var OhMyDays = L.marker([-33.88226770573398, 151.19015070768268]).bindPopup("Oh My Days Cafe - Other Vegan Option"),
