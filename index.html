@@ -33,8 +33,17 @@
   <script>
     
     
-  var greenIcon = new L.Icon({
-  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+    var greenIcon = new L.Icon({
+    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41]
+  });
+    
+      var goldIcon = new L.Icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-gold.png',
   shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
   iconSize: [25, 41],
   iconAnchor: [12, 41],
@@ -44,17 +53,17 @@
     
   /* Layer for they dont use chai */
   var OhMyDays = L.marker([-33.88226770573398, 151.19015070768268],{icon: greenIcon}).bindPopup("Oh My Days Cafe - Other Vegan Option"),
-      LilypadSydney = L.marker([-33.88360595953672, 151.19162860482174]).bindPopup("Lilypad Cafe Sydney - Other Vegan Option");
+      LilypadSydney = L.marker([-33.88360595953672, 151.19162860482174],{icon: greenIcon}).bindPopup("Lilypad Cafe Sydney - Other Vegan Option");
     
   var DoesNotDoChaiMe = L.layerGroup(
     [OhMyDays, LilypadSydney]
   );
     
   /* Layer for they use chai */
-  var Sapphos = L.marker([-33.882948709789, 151.1914159115681]).bindPopup("Sappho Books, Cafe & Bar - Does Chai Me!"),
-      RomoloPittSt = L.marker([-33.868925740936255, 151.20771357624943]).bindPopup("Romolo Espresso Cucina Pitt St - Does Chai Me!"),
-      BourkeStSurryHills = L.marker([-33.887869824610696, 151.21438351549025]).bindPopup("Bourke St Surry Hills - Does Chai Me!"),
-      BourkeStBarangaroo  = L.marker([-33.86435381387368, 151.20142669807498]).bindPopup("Bourke St Barangaroo - Does Chai Me!");
+  var Sapphos = L.marker([-33.882948709789, 151.1914159115681],{icon: goldIcon}).bindPopup("Sappho Books, Cafe & Bar - Does Chai Me!"),
+      RomoloPittSt = L.marker([-33.868925740936255, 151.20771357624943],{icon: goldIcon}).bindPopup("Romolo Espresso Cucina Pitt St - Does Chai Me!"),
+      BourkeStSurryHills = L.marker([-33.887869824610696, 151.21438351549025],{icon: goldIcon}).bindPopup("Bourke St Surry Hills - Does Chai Me!"),
+      BourkeStBarangaroo  = L.marker([-33.86435381387368, 151.20142669807498],{icon: goldIcon}).bindPopup("Bourke St Barangaroo - Does Chai Me!");
     
   var DoesChaiMe = L.layerGroup(
     [Sapphos, RomoloPittSt, BourkeStBarangaroo, BourkeStSurryHills]
