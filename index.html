@@ -32,8 +32,18 @@
     <!-- Create the interactive map content with JavaScript (.js) -->
   <script>
     
+    
+  var greenIcon = new L.Icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+});
+    
   /* Layer for they dont use chai */
-  var OhMyDays = L.marker([-33.88226770573398, 151.19015070768268]).bindPopup("Oh My Days Cafe - Other Vegan Option"),
+  var OhMyDays = L.marker([-33.88226770573398, 151.19015070768268],{icon: greenIcon}).bindPopup("Oh My Days Cafe - Other Vegan Option"),
       LilypadSydney = L.marker([-33.88360595953672, 151.19162860482174]).bindPopup("Lilypad Cafe Sydney - Other Vegan Option");
     
   var DoesNotDoChaiMe = L.layerGroup(
