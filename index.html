@@ -32,7 +32,18 @@
     <!-- Create the interactive map content with JavaScript (.js) -->
   <script>
     
+    //milk brands and types
+    const oatMilk = [Oatly, Alt Dairy Co, Happy happy oat, Milklab oat];
+    const soyMilk = [Happy happy soy boy, Bonsoy, Milklab soy];
+    const alMilk = [Milklab];
     
+    // chai brands
+    const chaiBrand = [Chai me, sticky chai, powder chai];
+    
+    //cafes and their variables
+    
+    const BourkeStBarangaroo = [oatMilk[1], soyMilk[1], alMilk[0], chaiBrand[0]];
+
     var greenIcon = new L.Icon({
     iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
     shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
@@ -63,7 +74,7 @@
   var Sapphos = L.marker([-33.882948709789, 151.1914159115681],{icon: goldIcon}).bindPopup("Sappho Books, Cafe & Bar - Does Chai Me!"),
       RomoloPittSt = L.marker([-33.868925740936255, 151.20771357624943],{icon: goldIcon}).bindPopup("Romolo Espresso Cucina Pitt St - Does Chai Me!"),
       BourkeStSurryHills = L.marker([-33.887869824610696, 151.21438351549025],{icon: goldIcon}).bindPopup("Bourke St Surry Hills - Does Chai Me!"),
-      BourkeStBarangaroo  = L.marker([-33.86435381387368, 151.20142669807498],{icon: goldIcon}).bindPopup("Bourke St Barangaroo - Does Chai Me!");
+      BourkeStBarangaroo  = L.marker([-33.86435381387368, 151.20142669807498],{icon: goldIcon}).bindPopup("Bourke St Barangaroo - Does Chai Me!" + BourkeStBarangaroo.join(" * "));
     
   var DoesChaiMe = L.layerGroup(
     [Sapphos, RomoloPittSt, BourkeStBarangaroo, BourkeStSurryHills]
