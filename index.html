@@ -49,9 +49,9 @@
       BourkeStBarangarooList.set('Chai', chaiBrand[0]);
 
     // looping through Map
-    for (let [key, value] of BourkeStBarangarooList) {
+    BourkeStBarangarooList.forEach(function(value, key) {
         key + '- ' + value;
-    }
+    })
 
     var greenIcon = new L.Icon({
     iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
