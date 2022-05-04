@@ -42,13 +42,7 @@
     
     //cafes and their variables
       
-    let BourkeStBarangarooList = [oatMilk[1], soyMilk[1], alMilk[0], chaiBrand[0]];
-
-
-    // looping through Map
-    BourkeStBarangarooList.forEach(function(value, key) {
-        String(key + '- ' + value);
-    })
+    let BourkeStBarangarooList = [oatMilk[1], soyMilk[1], alMilk[0], chaiBrand[0]];    
 
     var greenIcon = new L.Icon({
     iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
@@ -68,6 +62,13 @@
   shadowSize: [41, 41]
 });
     
+  var popup = L.popup({
+    
+  })
+  .setLatLng(latlng)
+  .setContent('<p>'+ BourkeStBarangarooList +'</p>')
+  .openOn(map);
+    
   /* Layer for they dont use chai */
   var OhMyDays = L.marker([-33.88226770573398, 151.19015070768268],{icon: greenIcon}).bindPopup("Oh My Days Cafe - Other Vegan Option"),
       LilypadSydney = L.marker([-33.88360595953672, 151.19162860482174],{icon: greenIcon}).bindPopup("Lilypad Cafe Sydney - Other Vegan Option");
@@ -80,7 +81,7 @@
   var Sapphos = L.marker([-33.882948709789, 151.1914159115681],{icon: goldIcon}).bindPopup("Sappho Books, Cafe & Bar - Does Chai Me!"),
       RomoloPittSt = L.marker([-33.868925740936255, 151.20771357624943],{icon: goldIcon}).bindPopup("Romolo Espresso Cucina Pitt St - Does Chai Me!"),
       BourkeStSurryHills = L.marker([-33.887869824610696, 151.21438351549025],{icon: goldIcon}).bindPopup("Bourke St Surry Hills - Does Chai Me!"),
-      BourkeStBarangaroo  = L.marker([-33.86435381387368, 151.20142669807498],{icon: goldIcon}).bindPopup(BourkeStBarangarooList);
+      BourkeStBarangaroo  = L.marker([-33.86435381387368, 151.20142669807498],{icon: goldIcon}).bindPopup(popup);
     
   var DoesChaiMe = L.layerGroup(
     [Sapphos, RomoloPittSt, BourkeStBarangaroo, BourkeStSurryHills]
