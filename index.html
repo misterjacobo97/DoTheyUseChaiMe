@@ -33,16 +33,14 @@
   <script>
     
     //milk brands and types
-    const oatMilk = ["Oatly", "Alt Dairy Co", "Happy happy oat", "Milklab oat"];
-    const soyMilk = ["Happy happy soy boy", "Bonsoy", "Milklab soy"];
-    const alMilk = ["Milklab"];
+    const oatMilk = ["<li> Oatly </li>", "<li> Alt Dairy Co </li>", "<li> Happy happy oat </li>", "<li> Milklab oat </li>"];
+    const soyMilk = ["<li> Happy happy soy boy </li>", "<li> Bonsoy </li>", "<li> Milklab soy </li>"];
+    const alMilk = ["<li> Milklab </li>"];
     
     // chai brands
-    const chaiBrand = ["Chai me", "sticky chai", "powder chai"];
+    const chaiBrand = ["<li> Chai me </li>", "<li> sticky chai </li>", "<li> powder chai </li>"];
     
     //cafes and their variables
-      
-    let BourkeStBarangarooList = [oatMilk[1], soyMilk[1], alMilk[0], chaiBrand[0]];    
 
     var greenIcon = new L.Icon({
     iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
@@ -66,7 +64,7 @@
   
   )
   .setLatLng(latlng)
-  .setContent('<p>'+ BourkeStBarangarooList[] +'</p>')
+  .setContent('<ul>'+ oatMilk[1] + soyMilk[1] + alMilk[0] + chaiBrand[0] + '</ul>')
   .openOn(map);
     
   /* Layer for they dont use chai */
