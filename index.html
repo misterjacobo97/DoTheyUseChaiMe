@@ -60,10 +60,6 @@
   shadowSize: [41, 41]
 });
     
-  var popupB = L.popup()
-  .setLatLng(-33.86435381387368, 151.20142669807498)
-  .setContent('<ul '+ oatMilk[1] + soyMilk[1] + alMilk[0] + chaiBrand[0] + '</ul>')
-  .openOn(map);
     
   /* Layer for they dont use chai */
   var OhMyDays = L.marker([-33.88226770573398, 151.19015070768268],{icon: greenIcon}).bindPopup("Oh My Days Cafe - Other Vegan Option"),
@@ -77,7 +73,7 @@
   var Sapphos = L.marker([-33.882948709789, 151.1914159115681],{icon: goldIcon}).bindPopup("Sappho Books, Cafe & Bar - Does Chai Me!"),
       RomoloPittSt = L.marker([-33.868925740936255, 151.20771357624943],{icon: goldIcon}).bindPopup("Romolo Espresso Cucina Pitt St - Does Chai Me!"),
       BourkeStSurryHills = L.marker([-33.887869824610696, 151.21438351549025],{icon: goldIcon}).bindPopup("Bourke St Surry Hills - Does Chai Me!"),
-      BourkeStBarangaroo  = L.marker([-33.86435381387368, 151.20142669807498],{icon: goldIcon}).bindPopup(popupB);
+      BourkeStBarangaroo  = L.marker([-33.86435381387368, 151.20142669807498],{icon: goldIcon}).bindPopup('<ul> '+ oatMilk[1] + soyMilk[1] + alMilk[0] + chaiBrand[0] + '</ul>');
     
   var DoesChaiMe = L.layerGroup(
     [Sapphos, RomoloPittSt, BourkeStBarangaroo, BourkeStSurryHills]
