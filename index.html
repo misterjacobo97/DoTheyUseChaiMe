@@ -40,6 +40,11 @@
     // chai brands
     const chaiBrand = ["<li> Chai me </li>", "<li> sticky chai </li>", "<li> powder chai </li>"];
     
+    // Cafes and their info
+    const Info_OhMyDays = ('<ul>' + oatMilk(1) + soyMilk(0) + alMilk(0) '</ul>');
+    const Info_LilypadSydney = ();
+    
+
     //cafes and their variables
 
     var greenIcon = new L.Icon({
@@ -62,7 +67,7 @@
     
     
   /* Layer for they dont use chai */
-  var OhMyDays = L.marker([-33.88226770573398, 151.19015070768268],{icon: greenIcon}).bindPopup("Oh My Days Cafe - Other Vegan Option"),
+  var OhMyDays = L.marker([-33.88226770573398, 151.19015070768268],{icon: greenIcon}).bindPopup(Info_OhMyDays),
       LilypadSydney = L.marker([-33.88360595953672, 151.19162860482174],{icon: greenIcon}).bindPopup("Lilypad Cafe Sydney - Other Vegan Option");
     
   var DoesNotDoChaiMe = L.layerGroup(
