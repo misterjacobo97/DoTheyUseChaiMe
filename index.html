@@ -32,17 +32,20 @@
     <!-- Create the interactive map content with JavaScript (.js) -->
   <script>
     
+    // Do they use chai me?
+    const DoTheyUseIt = ["They do <b>NOT</b> use Chai Me! <br>", "They <b>DO</b> use Chai me! <br>"];
+
     //milk brands and types
-    const oatMilk = ["<li> Oatly </li>", "<li> Alt Dairy Co </li>", "<li> Happy happy oat </li>", "<li> Milklab oat </li>"];
-    const soyMilk = ["<li> Happy happy soy boy </li>", "<li> Bonsoy </li>", "<li> Milklab soy </li>"];
-    const alMilk = ["<li> Milklab </li>"];
+    const oatMilk = ["<li> <b>Oat: </b> Unconfirmed </li>", "<li> <b>Oat: </b> Oatly </li>", "<li> <b>Oat: </b> Alt Dairy Co </li>", "<li> <b>Oat: </b> Happy happy oat </li>", "<li> <b>Oat: </b> Milklab oat </li>"];
+    const soyMilk = ["<li> <b>Soy: </b> Unconfirmed </li>", "<li> <b>Soy: </b> Happy happy soy boy </li>", "<li> <b>Soy: </b> Bonsoy </li>", "<li> <b>Soy: </b> Milklab soy </li>"];
+    const alMilk = ["<li> <b>Almond: </b> Unconfirmed </li>", "<li> <b>Almond: </b> Milklab </li>"];
     
     // chai brands
     const chaiBrand = ["<li> Chai me </li>", "<li> sticky chai </li>", "<li> powder chai </li>"];
     
     // Cafes and their info
-    const Info_OhMyDays = String('<p> Does NOT do Chai Me! <br>' + '<ul> ' + oatMilk[1] + soyMilk[0] + alMilk[0] + '</ul> </p>');
-    const Info_LilypadSydney = String('Does NOT do Chai Me! <br>' +'<ul> ' + oatMilk[1] + soyMilk[0] + alMilk[0] + '</ul>');
+    const Info_OhMyDays = String('<p>' + DoTheyUseIt[0] + '<ul> ' + oatMilk[2] + soyMilk[1] + alMilk[1] + '</ul>' + '</p>');
+    const Info_LilypadSydney = String('<p>' + DoTheyUseIt[0] + '<ul> ' + oatMilk[0] + soyMilk[0] + alMilk[0] + '</ul>' + '</p>');
     
 
     //cafes and their variables
@@ -68,7 +71,7 @@
     
   /* Layer for they dont use chai */
   var OhMyDays = L.marker([-33.88226770573398, 151.19015070768268],{icon: greenIcon}).bindPopup(Info_OhMyDays),
-      LilypadSydney = L.marker([-33.88360595953672, 151.19162860482174],{icon: greenIcon}).bindPopup("Lilypad Cafe Sydney - Other Vegan Option");
+      LilypadSydney = L.marker([-33.88360595953672, 151.19162860482174],{icon: greenIcon}).bindPopup(Info_LilypadSydney);
     
   var DoesNotDoChaiMe = L.layerGroup(
     [OhMyDays, LilypadSydney]
