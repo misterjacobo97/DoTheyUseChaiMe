@@ -16,7 +16,7 @@
   
     body { margin:0; padding:0; }
     #map { position: absolute; top:0; bottom:0; right:0; left:0; }
-    #map-title { position: relative; margin-top: 10px; margin-left: 25%; float: left; background: white; border: 2px solid rgba(0,0,0,0.2); padding: 6px 8px; font-family: Helvetica; font-weight: bold; font-size: 1.5rem; z-index: 800; }
+    #map-title { position: relative; margin-top: 10px; margin-left: 25%; float: left; background: white; border: 2px solid rgba(0,0,0,0.2); padding: 6px 8px; font-family: Helvetica; font-weight: bold; font-size: 1.2rem; z-index: 800; }
 
    
   </style>
@@ -26,7 +26,7 @@
  <body>
 
     <!-- Display the map and title with HTML division tags  -->
-    <div id="map-title">Do They Use Chai Me Map</div>
+    <div id="map-title">Do They Use <br> Chai Me Map</div>
     <div id="map"></div>
 
     <!-- Create the interactive map content with JavaScript (.js) -->
@@ -44,34 +44,34 @@
     const chaiBrand = ["<li> Chai me </li>", "<li> sticky chai </li>", "<li> powder chai </li>"];
     
     // Cafes and their info
-    const Info_OhMyDays = String('<p>' + '<h2><b> Oh My Days </b></h2> <br>' + DoTheyUseIt[0] + '<ul> ' + oatMilk[2] + soyMilk[1] + alMilk[1] + '</ul>' + '</p>');
-    const Info_LilypadSydney = String('<p>' + '<h2><b> Lilypad Sydney </b></h2> <br>' + DoTheyUseIt[0] + '<ul> ' + oatMilk[0] + soyMilk[0] + alMilk[0] + '</ul>' + '</p>');
-    const Info_Sapphos = String('<p>' + '<h2><b> Sapphos cafe </b></h2> <br>' + DoTheyUseIt[1] + '<ul> ' + oatMilk[2] + soyMilk[0] + alMilk[0] + '</ul>' + '</p>');
-    const Info_RomoloPittSt = String('<p>' + '<h2><b> Romolo Pitt St </b></h2> <br>' + DoTheyUseIt[1] + '<ul> ' + oatMilk[0] + soyMilk[0] + alMilk[0] + '</ul>' + '</p>');
-    const Info_BourkeStSurryHills = String('<p>' + '<h2><b> Bourke St Cafe Surry Hills </b></h2> <br>' + DoTheyUseIt[1] + '<ul> ' + oatMilk[2] + soyMilk[0] + alMilk[0] + '</ul>' + '</p>');
-    const Info_BourkeStBarangaroo = String('<p>' + '<h2><b> Bourke St Cafe Barangaroo </b></h2> <br>' + DoTheyUseIt[1] + '<ul> ' + oatMilk[0] + soyMilk[0] + alMilk[0] + '</ul>' + '</p>');
+    const Info_OhMyDays = String('<p>' + '<h3><b> Oh My Days </b></h3>' + DoTheyUseIt[0] + '<ul> ' + oatMilk[2] + soyMilk[1] + alMilk[1] + '</ul>' + '</p>');
+    const Info_LilypadSydney = String('<p>' + '<h3><b> Lilypad Sydney </b></h3>' + DoTheyUseIt[0] + '<ul> ' + oatMilk[0] + soyMilk[0] + alMilk[0] + '</ul>' + '</p>');
+    const Info_Sapphos = String('<p>' + '<h3><b> Sapphos cafe </b></h3>' + DoTheyUseIt[1] + '<ul> ' + oatMilk[2] + soyMilk[0] + alMilk[0] + '</ul>' + '</p>');
+    const Info_RomoloPittSt = String('<p>' + '<h3><b> Romolo Pitt St </b></h3>' + DoTheyUseIt[1] + '<ul> ' + oatMilk[0] + soyMilk[0] + alMilk[0] + '</ul>' + '</p>');
+    const Info_BourkeStSurryHills = String('<p>' + '<h3><b> Bourke St Cafe Surry Hills </b></h3>' + DoTheyUseIt[1] + '<ul> ' + oatMilk[2] + soyMilk[0] + alMilk[0] + '</ul>' + '</p>');
+    const Info_BourkeStBarangaroo = String('<p>' + '<h3><b> Bourke St Cafe Barangaroo </b></h3>' + DoTheyUseIt[1] + '<ul> ' + oatMilk[0] + soyMilk[0] + alMilk[0] + '</ul>' + '</p>');
     
 
     //cafes and their variables
 
     var greenIcon = new L.Icon({
-    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
-    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-    iconSize: [25, 41],
-    iconAnchor: [12, 41],
-    popupAnchor: [1, -34],
-    shadowSize: [41, 41]
-  });
+      iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+      shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      popupAnchor: [1, -34],
+      shadowSize: [41, 41]
+    });
     
-      var goldIcon = new L.Icon({
-  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-gold.png',
-  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
-  popupAnchor: [1, -34],
-  shadowSize: [41, 41]
-});
-    
+    var goldIcon = new L.Icon({
+      iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-gold.png',
+      shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      popupAnchor: [1, -34],
+      shadowSize: [41, 41]
+    });
+      
     
   /* Layer for they dont use chai */
   var OhMyDays = L.marker([-33.88226770573398, 151.19015070768268],{icon: greenIcon}).bindPopup(Info_OhMyDays),
