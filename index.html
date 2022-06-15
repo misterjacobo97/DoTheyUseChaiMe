@@ -42,35 +42,35 @@
 
     
     //milk brands and types
-    const oatMilk = ["<li> <b>Oat: </b> Unconfirmed </li>", "<li> <b>Oat: </b> Oatly </li>", "<li> <b>Oat: </b> Alt Dairy Co </li>", "<li> <b>Oat: </b> Happy happy oat </li>", "<li> <b>Oat: </b> Milklab oat </li>"];
-    const soyMilk = ["<li> <b>Soy: </b> Unconfirmed </li>", "<li> <b>Soy: </b> Happy happy soy boy </li>", "<li> <b>Soy: </b> Bonsoy </li>", "<li> <b>Soy: </b> Milklab soy </li>"];
-    const alMilk = ["<li> <b>Almond: </b> Unconfirmed </li>", "<li> <b>Almond: </b> Milklab </li>"];
+    var oatMilk = ["<li> <b>Oat: </b> Unconfirmed </li>", "<li> <b>Oat: </b> Oatly </li>", "<li> <b>Oat: </b> Alt Dairy Co </li>", "<li> <b>Oat: </b> Happy happy oat </li>", "<li> <b>Oat: </b> Milklab oat </li>"];
+    var soyMilk = ["<li> <b>Soy: </b> Unconfirmed </li>", "<li> <b>Soy: </b> Happy happy soy boy </li>", "<li> <b>Soy: </b> Bonsoy </li>", "<li> <b>Soy: </b> Milklab soy </li>"];
+    var alMilk = ["<li> <b>Almond: </b> Unconfirmed </li>", "<li> <b>Almond: </b> Milklab </li>"];
 
     
       //Separate brand variables
         //Unconfirmed vars
-          const UnconfirmedMilkOpt = ["</li>", "<li> <b>Oat: </b>", "<li> <b>Soy: </b>", "<li> <b>Almond: </b>"];
-          const OatUnconfirmed = String(altmilkvar[1] + 'Unconfirmed' + altmilkvar[0]);
-          const SoyUnconfirmed = String(altmilkvar[2] + 'Unconfirmed' + altmilkvar[0]);
-          const AlmondUnconfirmed = String(altmilkvar[3] + 'Unconfirmed' + altmilkvar[0]);
+          var UnconfirmedMilkOpt = ["</li>", "<li> <b>Oat: </b>", "<li> <b>Soy: </b>", "<li> <b>Almond: </b>"];
+          var OatUnconfirmed = String(altmilkvar[1] + 'Unconfirmed' + altmilkvar[0]);
+          var SoyUnconfirmed = String(altmilkvar[2] + 'Unconfirmed' + altmilkvar[0]);
+          var AlmondUnconfirmed = String(altmilkvar[3] + 'Unconfirmed' + altmilkvar[0]);
         // Oat brand vars
-          const Oatly = String(altmilkvar[1] + 'Oatly' + altmilkvar[0]);
-          const AltDairyCo = String(altmilkvar[1] + 'Alt Dairy Co.' + altmilkvar[0]);
-          const MilklabOat = String(altmilkvar[1] + 'Milklab' + altmilkvar[0]);
+          var Oatly = String(altmilkvar[1] + 'Oatly' + altmilkvar[0]);
+          var AltDairyCo = String(altmilkvar[1] + 'Alt Dairy Co.' + altmilkvar[0]);
+          var MilklabOat = String(altmilkvar[1] + 'Milklab' + altmilkvar[0]);
         // Soy brand vars
-          const HappyHappySoyBoy = String(altmilkvar[2] + 'Happy Happy Soy Boy' + altmilkvar[0]);
-          const Bonsoy = String(altmilkvar[2] + 'Bonsoy' + altmilkvar[0]);
-          const MilklabSoy = String(altmilkvar[2] + 'Milklab' + altmilkvar[0]);
+          var HappyHappySoyBoy = String(altmilkvar[2] + 'Happy Happy Soy Boy' + altmilkvar[0]);
+          var Bonsoy = String(altmilkvar[2] + 'Bonsoy' + altmilkvar[0]);
+          var MilklabSoy = String(altmilkvar[2] + 'Milklab' + altmilkvar[0]);
         // Almond brand vars
-          const MilklabAlmond = String(altmilkvar[3] + 'Milklab' + altmilkvar[0]);
-    
+          var MilklabAlmond = String(altmilkvar[3] + 'Milklab' + altmilkvar[0]);
+      
     // Cafes and their info
-    const Info_OhMyDays = String('<p>' + '<h3><b> Oh My Days </b></h3>' + NoChaiMe + '<ul> ' + AltDairyCo + HappyHappySoyBoy + MilklabAlmond + '</ul>' + '</p>');
-    const Info_LilypadSydney = String('<p>' + '<h3><b> Lilypad Sydney </b></h3>' + NoChaiMe + '<ul> ' + OatUnconfirmed + SoyUnconfirmed + AlmondUnconfirmed + '</ul>' + '</p>');
-    const Info_Sapphos = String('<p>' + '<h3><b> Sapphos cafe </b></h3>' + YesChaiMe + '<ul> ' + AltDairyCo + SoyUnconfirmed + AlmondUnconfirmed + '</ul>' + '</p>');
-    const Info_RomoloPittSt = String('<p>' + '<h3><b> Romolo Pitt St </b></h3>' + NoChaiMe + '<ul> ' + OatUnconfirmed + SoyUnconfirmed + AlmondUnconfirmed + '</ul>' + '</p>');
-    const Info_BourkeStSurryHills = String('<p>' + '<h3><b> Bourke St Cafe Surry Hills </b></h3>' + YesChaiMe + '<ul> ' + AltDairyCo + SoyUnconfirmed + AlmondUnconfirmed + '</ul>' + '</p>');
-    const Info_BourkeStBarangaroo = String('<p>' + '<h3><b> Bourke St Cafe Barangaroo </b></h3>' + YesChaiMe + '<ul> ' + AltDairyCo + SoyUnconfirmed + AlmondUnconfirmed + '</ul>' + '</p>');
+      var Info_OhMyDays = String('<p>' + '<h3><b> Oh My Days </b></h3>' + NoChaiMe + '<ul> ' + AltDairyCo + HappyHappySoyBoy + MilklabAlmond + '</ul>' + '</p>');
+      var Info_LilypadSydney = String('<p>' + '<h3><b> Lilypad Sydney </b></h3>' + NoChaiMe + '<ul> ' + OatUnconfirmed + SoyUnconfirmed + AlmondUnconfirmed + '</ul>' + '</p>');
+      var Info_Sapphos = String('<p>' + '<h3><b> Sapphos cafe </b></h3>' + YesChaiMe + '<ul> ' + AltDairyCo + SoyUnconfirmed + AlmondUnconfirmed + '</ul>' + '</p>');
+      var Info_RomoloPittSt = String('<p>' + '<h3><b> Romolo Pitt St </b></h3>' + NoChaiMe + '<ul> ' + OatUnconfirmed + SoyUnconfirmed + AlmondUnconfirmed + '</ul>' + '</p>');
+      var Info_BourkeStSurryHills = String('<p>' + '<h3><b> Bourke St Cafe Surry Hills </b></h3>' + YesChaiMe + '<ul> ' + AltDairyCo + SoyUnconfirmed + AlmondUnconfirmed + '</ul>' + '</p>');
+      var Info_BourkeStBarangaroo = String('<p>' + '<h3><b> Bourke St Cafe Barangaroo </b></h3>' + YesChaiMe + '<ul> ' + AltDairyCo + SoyUnconfirmed + AlmondUnconfirmed + '</ul>' + '</p>');
     
 
     //cafes and their variables
