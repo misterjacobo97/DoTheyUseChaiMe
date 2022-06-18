@@ -62,11 +62,8 @@
       var Info_LilypadSydney = String('<p>' + '<h3><b> Lilypad Sydney </b></h3>' + NoChaiMe + '<ul> ' + OatUnconfirmed + SoyUnconfirmed + AlmondUnconfirmed + '</ul>' + '</p>');
       var Info_Sapphos = String('<p>' + '<h3><b> Sapphos cafe </b></h3>' + YesChaiMe + '<ul> ' + AltDairyCo + SoyUnconfirmed + AlmondUnconfirmed + '</ul>' + '</p>');
       var Info_RomoloPittSt = String('<p>' + '<h3><b> Romolo Pitt St </b></h3>' + NoChaiMe + '<ul> ' + OatUnconfirmed + SoyUnconfirmed + AlmondUnconfirmed + '</ul>' + '</p>');
-      var Info_BourkeStSurryHills = String('<p>' + '<h3><b> Bourke St Cafe Surry Hills </b></h3>' + YesChaiMe + '<ul> ' + AltDairyCo + SoyUnconfirmed + AlmondUnconfirmed + '</ul>' + '</p>');
-      var Info_BourkeStBarangaroo = String('<p>' + '<h3><b> Bourke St Cafe Barangaroo </b></h3>' + YesChaiMe + '<ul> ' + AltDairyCo + SoyUnconfirmed + AlmondUnconfirmed + '</ul>' + '</p>');
-    
-
-    //cafes and their variables
+      var Info_BourkeStSurryHills = String('<p>' + '<h3><b> Bourke St Cafe Surry Hills </b></h3>' + YesChaiMe + '<ul> ' + AltDairyCo + Bonsoy + MilklabAlmond + '</ul>' + '</p>');
+      var Info_BourkeStBarangaroo = String('<p>' + '<h3><b> Bourke St Cafe Barangaroo </b></h3>' + YesChaiMe + '<ul> ' + AltDairyCo + Bonsoy + MilklabAlmond + '</ul>' + '</p>');
 
     var greenIcon = new L.Icon({
       iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
@@ -86,7 +83,7 @@
       shadowSize: [41, 41]
     });
       
-    
+
   /* Layer for they dont use chai */
   var OhMyDays = L.marker([-33.88226770573398, 151.19015070768268],{icon: greenIcon}).bindPopup(Info_OhMyDays),
       LilypadSydney = L.marker([-33.88360595953672, 151.19162860482174],{icon: greenIcon}).bindPopup(Info_LilypadSydney);
@@ -102,7 +99,7 @@
       BourkeStBarangaroo  = L.marker([-33.86435381387368, 151.20142669807498],{icon: goldIcon}).bindPopup(Info_BourkeStBarangaroo);
     
   var DoesChaiMe = L.layerGroup(
-    [Sapphos, RomoloPittSt, BourkeStBarangaroo, BourkeStSurryHills]
+    [Sapphos, BourkeStBarangaroo, BourkeStSurryHills]
   );
     
   var overlayMaps = {
