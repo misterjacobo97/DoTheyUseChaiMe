@@ -86,15 +86,16 @@
 
   /* Layer for they dont use chai */
   var OhMyDays = L.marker([-33.88226770573398, 151.19015070768268],{icon: greenIcon}).bindPopup(Info_OhMyDays),
-      LilypadSydney = L.marker([-33.88360595953672, 151.19162860482174],{icon: greenIcon}).bindPopup(Info_LilypadSydney);
+      LilypadSydney = L.marker([-33.88360595953672, 151.19162860482174],{icon: greenIcon}).bindPopup(Info_LilypadSydney),
+      RomoloPittSt = L.marker([-33.868925740936255, 151.20771357624943],{icon: goldIcon}).bindPopup(Info_RomoloPittSt);
     
+
   var DoesNotDoChaiMe = L.layerGroup(
-    [OhMyDays, LilypadSydney]
+    [OhMyDays, LilypadSydney, RomoloPittSt]
   );
     
   /* Layer for they use chai */
   var Sapphos = L.marker([-33.882948709789, 151.1914159115681],{icon: goldIcon}).bindPopup(Info_Sapphos),
-      RomoloPittSt = L.marker([-33.868925740936255, 151.20771357624943],{icon: goldIcon}).bindPopup(Info_RomoloPittSt),
       BourkeStSurryHills = L.marker([-33.887869824610696, 151.21438351549025],{icon: goldIcon}).bindPopup(Info_BourkeStSurryHills),
       BourkeStBarangaroo  = L.marker([-33.86435381387368, 151.20142669807498],{icon: goldIcon}).bindPopup(Info_BourkeStBarangaroo);
     
