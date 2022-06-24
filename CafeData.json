@@ -1,0 +1,112 @@
+
+{
+    "Cafe": [
+        {
+            "name": "Oh My Days",
+            "Chai Me": {
+                "Stock": "False",
+                "Type": "Sticky Chai"
+            },            
+            "Address": {
+                "LatLong": "",
+                "Postal": ""
+            },
+            "Oat": "Alt Dairy Co.",
+            "Almond": "Alt Dairy Co.",
+            "Soy": "Happy Happy Soy Boy"
+        },
+
+        {
+            "name": "Sapphos",
+            "Chai Me": {
+                "Stock": "True",
+                "Type": "Syrup"
+            },
+            "Address": {
+                "LatLong": "",
+                "Postal": ""
+            },            
+            "Oat": "Alt Dairy Co.",
+            "Almond": "",
+            "Soy": ""
+        },
+
+        {
+            "name": "Lillypad cafe",
+            "Chai Me": {
+                "Stock": "False",
+                "Type": ""
+            },
+            "Address": {
+                "LatLong": "",
+                "Postal": ""
+            },            
+            "Oat": "",
+            "Almond": "",
+            "Soy": ""
+        },
+
+        {
+            "name": "Romolos Pitt St",
+            "Chai Me": {
+                "Stock": "True",
+                "Type": "Syrup"
+            },
+            "Address": {
+                "LatLong": "",
+                "Postal": ""
+            },            
+            "Oat": "",
+            "Almond": "",
+            "Soy": ""
+        },
+
+        {
+            "name": "Bourke St Bakery Barangaroo",
+            "Chai Me": {
+                "Stock": "True",
+                "Type": "Syrup"
+            },
+            "Address": {
+                "LatLong": "",
+                "Postal": ""
+            },            
+            "Oat": "Alt Dairy Co.",
+            "Almond": "Milklab",
+            "Soy": "Bonsoy"
+        },
+
+        {
+            "name": "Bourke St Bakery Surry Hills",
+            "Chai Me": {
+                "Stock": "True",
+                "Type": "Syrup"
+            },
+            "Address": {
+                "LatLong": "",
+                "Postal": ""
+            },            
+            "Oat": "Alt Dairy Co.",
+            "Almond": "Milklab",
+            "Soy": "Bonsoy"
+            
+        },
+
+        {
+            "name": "Mecca",
+            "Chai Me": {
+                "Stock": "True",
+                "Type": "Syrup"
+            },
+            "Address": {
+                "LatLong": "",
+                "Postal": "Town hall"
+            },            
+            "Oat": "Alt Dairy Co.",
+            "Almond": "Milklab",
+            "Soy": "Bonsoy"
+            
+        }
+
+    ]
+}

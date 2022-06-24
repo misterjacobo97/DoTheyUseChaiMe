@@ -39,7 +39,7 @@
 
       // chai brands
       // const chaiBrand = ["<li> Chai me </li>", "<li> sticky chai </li>", "<li> powder chai </li>"]
-    
+/*
       //Separate brand variables
         //Unconfirmed vars
           var MilkOpt = ["</li>", "<li> <b>Oat: </b>", "<li> <b>Soy: </b>", "<li> <b>Almond: </b>"];
@@ -84,7 +84,7 @@
     });
       
 
-  /* Layer for they dont use chai */
+  // Layer for they dont use chai
   var OhMyDays = L.marker([-33.88226770573398, 151.19015070768268],{icon: greenIcon}).bindPopup(Info_OhMyDays),
       LilypadSydney = L.marker([-33.88360595953672, 151.19162860482174],{icon: greenIcon}).bindPopup(Info_LilypadSydney);
     
@@ -92,7 +92,7 @@
     [OhMyDays, LilypadSydney]
   );
     
-  /* Layer for they use chai */
+  // Layer for they use chai
   var Sapphos = L.marker([-33.882948709789, 151.1914159115681],{icon: goldIcon}).bindPopup(Info_Sapphos),
       RomoloPittSt = L.marker([-33.868925740936255, 151.20771357624943],{icon: goldIcon}).bindPopup(Info_RomoloPittSt),
       BourkeStSurryHills = L.marker([-33.887869824610696, 151.21438351549025],{icon: goldIcon}).bindPopup(Info_BourkeStSurryHills),
@@ -105,17 +105,27 @@
   var overlayMaps = {
     "Does Chai Me!": DoesChaiMe,
     "Does Other Vegan Option!": DoesNotDoChaiMe
-  };  
-  
+  };
+*/
 
-  /* Set up the initial map center and zoom level */
-  var map = L.map('map', {
-    center: [-33.87196108839124, 151.21093596711813], // EDIT coordinates to re-center map
-    zoom: 13,  // EDIT from 1 (zoomed out) to 18 (zoomed in)
-    scrollWheelZoom: false,
-    tap: false,
-    layers: [DoesChaiMe, DoesNotDoChaiMe]
-  });
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+       // Typical action to be performed when the document is ready:
+       document.getElementById("demo").innerHTML = xhttp.responseText;
+    }
+};
+  xhttp.open("GET", "CafeData.json", true);
+  xhttp.send();
+
+    /* Set up the initial map center and zoom level */
+    var map = L.map('map', {
+      center: [-33.87196108839124, 151.21093596711813], // EDIT coordinates to re-center map
+      zoom: 13,  // EDIT from 1 (zoomed out) to 18 (zoomed in)
+      scrollWheelZoom: false,
+      tap: false,
+      layers: [DoesChaiMe, DoesNotDoChaiMe]
+    });
     
   /* display basemap tiles -- see others at https://leaflet-extras.github.io/leaflet-providers/preview/ */
   L.tileLayer(
