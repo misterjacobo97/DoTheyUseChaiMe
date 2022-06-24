@@ -133,12 +133,12 @@
     for (i = 0; i < Cafe.length; i++){
       
       var MilkOpt = ["</li>", "<li> <b>Oat: </b>", "<li> <b>Soy: </b>", "<li> <b>Almond: </b>"];
-      var OatInfo = String(MilkOpt[1] + String(Cafe[i].Oat[i]) + MilkOpt[0]);
-      var SoyInfo = String(MilkOpt[2] + String(Cafe[i].Soy[i]) + MilkOpt[0]);
-      var AlmondInfo = String(MilkOpt[3] + String(Cafe[i].Almond[i]) + MilkOpt[0]);
+      var OatInfo = String(MilkOpt[1] + String(Cafe[i].Oat) + MilkOpt[0]);
+      var SoyInfo = String(MilkOpt[2] + String(Cafe[i].Soy) + MilkOpt[0]);
+      var AlmondInfo = String(MilkOpt[3] + String(Cafe[i].Almond) + MilkOpt[0]);
 
 
-      var CafeInfo = String('<p><h3><b>' + String(Cafe[i].Name[i]) + '</b></h3>' + String(Cafe[i].ChaiMe.Stock[i]) + '<ul> ' + OatInfo + SoyInfo + AlmondInfo + '</ul>' + '</p>');
+      var CafeInfo = String('<p><h3><b>' + String(Cafe[i].Name) + '</b></h3>' + String(Cafe[i].ChaiMe.Stock) + '<ul> ' + OatInfo + SoyInfo + AlmondInfo + '</ul>' + '</p>');
 
       var CafeMarker = L.marker([String(Cafe.Address.LatLong[i])],{icon: goldIcon}).bindPopup(CafeInfo);
     }
