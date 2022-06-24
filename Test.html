@@ -133,7 +133,7 @@
       var AlmondInfo = String(MilkOpt[3] + String(Cafe[i].Almond) + MilkOpt[0]);
 
 
-      var CafeInfo = String('<p><h3><b>' + String(Cafe[i].Name) + '</b></h3>' + String(Cafe[i].ChaiMe.Stock) + '<ul> ' + OatInfo + SoyInfo + AlmondInfo + '</ul>' + '</p>');
+      var CafeInfo = String('<p><h3><b>' + String(Cafe[i].Name) + '</b></h3>' + String(Cafe[i].ChaiMe[1].Stock) + '<ul> ' + OatInfo + SoyInfo + AlmondInfo + '</ul>' + '</p>');
 
       var CafeMarker = String('Cafe' + i + '=' + L.marker([String(Cafe.Address.LatLong[i])],{icon: goldIcon}).bindPopup(CafeInfo) + '<br>');
     
