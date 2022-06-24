@@ -124,8 +124,6 @@
   xhttp.open("GET", url, false);
   xhttp.send();
 
-  var MapMarker = CafeMarker;
-
   function MarkerFunction(Cafe){
 
     var i;
@@ -141,7 +139,6 @@
 
       var CafeMarker = String('Cafe' + i + '=' + L.marker([String(Cafe.Address.LatLong[i])],{icon: goldIcon}).bindPopup(CafeInfo) + '<br>');
     
-      return CafeMarker;
     }
 
   };
