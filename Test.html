@@ -115,23 +115,25 @@
         var response = JSON.parse(xhttp.responseText);
         var Cafe = response.Cafe;
         console.log(Cafe);
+
+        for (var i = 0; i < Cafe.length; i++){
+          
+          var MilkInfo = ["</li>", "<li> <b>Oat: </b>", "<li> <b>Soy: </b>", "<li> <b>Almond: </b>"];
+          var OatInfo = String(MilkOpt[1] + Cafe.Oat[i] + MilkOpt[0]);
+          var SoyInfo = String(MilkOpt[2] + Cafe.Soy[i] + MilkOpt[0]);
+          var AlmondInfo = String(MilkOpt[3] + Cafe.Almond[i] + MilkOpt[0]);
+
+
+          var CafeInfo = String('<p><h3><b>' + Cafe.Name[i] + '</b></h3>' + Cafe.ChaiMe.Stock[i] + '<ul> ' + OatInfo + SoyInfo + AlmondInfo + '</ul>' + '</p>');
+
+          var CafeMarker = L.marker([String(Cafe.Address.LatLong[i])],{icon: goldIcon}).bindPopup(String(CafeInfo));
+        }
       }
   };
   xhttp.open("GET", "CafeData.json", true);
   xhttp.send();
 
-  for (var i = 0; i < Cafe.length; i++){
-    
-    var MilkInfo = ["</li>", "<li> <b>Oat: </b>", "<li> <b>Soy: </b>", "<li> <b>Almond: </b>"];
-    var OatInfo = String(MilkOpt[1] + Cafe.Oat[i] + MilkOpt[0]);
-    var SoyInfo = String(MilkOpt[2] + Cafe.Soy[i] + MilkOpt[0]);
-    var AlmondInfo = String(MilkOpt[3] + Cafe.Almond[i] + MilkOpt[0]);
 
-
-    var CafeInfo = String('<p><h3><b>' + Cafe.Name[i] + '</b></h3>' + Cafe.ChaiMe.Stock[i] + '<ul> ' + OatInfo + SoyInfo + AlmondInfo + '</ul>' + '</p>');
-
-    var CafeMarker = L.marker([String(Cafe.Address.LatLong[i])],{icon: goldIcon}).bindPopup(String(CafeInfo));
-  }
 
     /* Set up the initial map center and zoom level */
     var map = L.map('map', {
