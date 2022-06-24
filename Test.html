@@ -126,11 +126,11 @@
 
           var CafeInfo = String('<p><h3><b>' + String(Cafe.Name[i]) + '</b></h3>' + String(Cafe.ChaiMe.Stock[i]) + '<ul> ' + OatInfo + SoyInfo + AlmondInfo + '</ul>' + '</p>');
 
-          var CafeMarker = L.marker([String(Cafe.Address.LatLong[i])],{icon: goldIcon}).bindPopup(String(CafeInfo));
+          var CafeMarker = L.marker([String(Cafe.Address.LatLong[i])],{icon: goldIcon}).bindPopup(CafeInfo);
         }
       }
   };
-  xhttp.open("GET", "CafeData.json", true);
+  xhttp.open("GET", "CafeData.json", false);
   xhttp.send();
 
 
