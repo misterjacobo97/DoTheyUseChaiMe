@@ -118,17 +118,17 @@
 
         var Cafe = response.Cafe;
 
-
+        MarkerFunction(Cafe);
           
         }
       };
   xhttp.open("GET", url, false);
   xhttp.send();
 
-  function MarkerFunction(Cafe){
+  function MarkerFunction(arr){
 
     var i;
-    for (i = 0; i < Cafe.length; i++){
+    for (i = 0; i < arr.length; i++){
       
       var MilkOpt = ["</li>", "<li> <b>Oat: </b>", "<li> <b>Soy: </b>", "<li> <b>Almond: </b>"];
       var OatInfo = String(MilkOpt[1] + String(Cafe[i].Oat[i]) + MilkOpt[0]);
