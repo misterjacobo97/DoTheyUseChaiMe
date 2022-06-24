@@ -140,9 +140,10 @@
 
       var CafeMarker = L.marker([String(Cafe.Address.LatLong[i])],{icon: goldIcon}).bindPopup(CafeInfo);
     }
-  };
+    
+    CafeMarker;
 
-CafeMarker;
+  };
 
     /* Set up the initial map center and zoom level */
     var map = L.map('map', {
