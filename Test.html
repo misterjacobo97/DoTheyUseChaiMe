@@ -113,10 +113,10 @@
       if (this.readyState == 4 && this.status == 200) {
         // Typical action to be performed when the document is ready:
         var response = JSON.parse(xhttp.responseText);
-        var Cafe = response.Cafe;
+        var Cafe = response.d.Cafe;
         console.log(Cafe.Address);
 
-        for (var i = 0; i < Cafe.length; i++){
+        for (var i = 0; i < Cafe.d.length; i++){
           
           var MilkOpt = ["</li>", "<li> <b>Oat: </b>", "<li> <b>Soy: </b>", "<li> <b>Almond: </b>"];
           var OatInfo = String(MilkOpt[1] + String(Cafe.Oat(i)) + MilkOpt[0]);
