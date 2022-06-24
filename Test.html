@@ -126,7 +126,7 @@
   function MarkerFunction(response){
 
     var i;
-    for (var i = 0; i < response.Cafe.length; i++){
+    for (var i = 0; i < response.length; i++){
       
       var MilkOpt = ["</li>", "<li> <b>Oat: </b>", "<li> <b>Soy: </b>", "<li> <b>Almond: </b>"];
       var OatInfo = String(MilkOpt[1] + String(response.Cafe[i].Oat[i]) + MilkOpt[0]);
