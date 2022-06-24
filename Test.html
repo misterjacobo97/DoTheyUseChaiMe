@@ -114,7 +114,7 @@
         // Typical action to be performed when the document is ready:
         var response = JSON.parse(xhttp.responseText);
         var Cafe = response.Cafe;
-        console.log(Cafe);
+        console.log(Cafe.Address);
 
         for (var i = 0; i < Cafe.length; i++){
           
@@ -129,7 +129,6 @@
           var CafeMarker = L.marker([String(Cafe.Address.LatLong(i))],{icon: goldIcon}).bindPopup(CafeInfo);
         }
 
-        console.log(cafe.Address);
       }
   };
   xhttp.open("GET", "CafeData.json", false);
