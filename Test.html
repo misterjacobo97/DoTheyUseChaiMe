@@ -108,18 +108,30 @@
   };
 */
 
-var xhttp = new XMLHttpRequest("http//vscode.dev/github/misterjacobo97/DoTheyUseChaiMe/blob/72ece2e90047fe6d95b2bb7493e0e3fd5b86c7d4/CafeData.json#L1-L112");
-xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-       // Typical action to be performed when the document is ready:
-       var response = JSON.parse(xhttp.responseText);
-       console.log(response.Cafe);
-    }
-};
+  var xhttp = new XMLHttpRequest("http//vscode.dev/github/misterjacobo97/DoTheyUseChaiMe/blob/72ece2e90047fe6d95b2bb7493e0e3fd5b86c7d4/CafeData.json#L1-L112");
+  xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        // Typical action to be performed when the document is ready:
+        var response = JSON.parse(xhttp.responseText);
+        var Cafe = response.Cafe;
+        console.log(response.Cafe);
+      }
+  };
   xhttp.open("GET", "CafeData.json", true);
   xhttp.send();
 
+  for (var i = 0; i < Cafe.length; i++){
+    
+    var MilkInfo = ["</li>", "<li> <b>Oat: </b>", "<li> <b>Soy: </b>", "<li> <b>Almond: </b>"];
+    var OatInfo = String(MilkOpt[1] + Cafe.Oat[i] + MilkOpt[0]);
+    var SoyInfo = String(MilkOpt[2] + Cafe.Soy[i] + MilkOpt[0]);
+    var AlmondInfo = String(MilkOpt[3] + Cafe.Almond[i] + MilkOpt[0]);
 
+
+    var CafeInfo = String('<p><h3><b>' + Cafe.Name[i] + '</b></h3>' + Cafe.ChaiMe.Stock[i] + '<ul> ' + OatInfo + SoyInfo + AlmondInfo + '</ul>' + '</p>');
+
+    var CafeMarker = L.marker([String(Cafe.Address.LatLong[i])],{icon: goldIcon}).bindPopup(String(CafeInfo));
+  }
 
     /* Set up the initial map center and zoom level */
     var map = L.map('map', {
@@ -129,6 +141,8 @@ xhttp.onreadystatechange = function() {
       tap: false,
       /*layers: [DoesChaiMe, DoesNotDoChaiMe]*/
     });
+
+    
     
   /* display basemap tiles -- see others at https://leaflet-extras.github.io/leaflet-providers/preview/ */
   L.tileLayer(

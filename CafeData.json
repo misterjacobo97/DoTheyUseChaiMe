@@ -2,13 +2,13 @@
 {
     "Cafe": [
         {
-            "name": "Oh My Days",
+            "Name": "Oh My Days",
             "Chai Me": {
                 "Stock": "False",
                 "Type": "Sticky Chai"
             },            
             "Address": {
-                "LatLong": "",
+                "LatLong": "-33.88226770573398, 151.19015070768268",
                 "Postal": ""
             },
             "Oat": "Alt Dairy Co.",
@@ -17,13 +17,13 @@
         },
 
         {
-            "name": "Sapphos",
+            "Name": "Sapphos",
             "Chai Me": {
                 "Stock": "True",
                 "Type": "Syrup"
             },
             "Address": {
-                "LatLong": "",
+                "LatLong": "-33.882948709789, 151.1914159115681",
                 "Postal": ""
             },            
             "Oat": "Alt Dairy Co.",
@@ -32,13 +32,13 @@
         },
 
         {
-            "name": "Lillypad cafe",
+            "Name": "Lillypad cafe",
             "Chai Me": {
                 "Stock": "False",
                 "Type": ""
             },
             "Address": {
-                "LatLong": "",
+                "LatLong": "-33.88360595953672, 151.19162860482174",
                 "Postal": ""
             },            
             "Oat": "",
@@ -47,13 +47,13 @@
         },
 
         {
-            "name": "Romolos Pitt St",
+            "Name": "Romolos Pitt St",
             "Chai Me": {
                 "Stock": "True",
                 "Type": "Syrup"
             },
             "Address": {
-                "LatLong": "",
+                "LatLong": "-33.868925740936255, 151.20771357624943",
                 "Postal": ""
             },            
             "Oat": "",
@@ -62,13 +62,13 @@
         },
 
         {
-            "name": "Bourke St Bakery Barangaroo",
+            "Name": "Bourke St Bakery Barangaroo",
             "Chai Me": {
                 "Stock": "True",
                 "Type": "Syrup"
             },
             "Address": {
-                "LatLong": "",
+                "LatLong": "-33.86435381387368, 151.20142669807498",
                 "Postal": ""
             },            
             "Oat": "Alt Dairy Co.",
@@ -77,13 +77,13 @@
         },
 
         {
-            "name": "Bourke St Bakery Surry Hills",
+            "Name": "Bourke St Bakery Surry Hills",
             "Chai Me": {
                 "Stock": "True",
                 "Type": "Syrup"
             },
             "Address": {
-                "LatLong": "",
+                "LatLong": "-33.887869824610696, 151.21438351549025",
                 "Postal": ""
             },            
             "Oat": "Alt Dairy Co.",
@@ -93,13 +93,13 @@
         },
 
         {
-            "name": "Mecca",
+            "Name": "Mecca",
             "Chai Me": {
                 "Stock": "True",
                 "Type": "Syrup"
             },
             "Address": {
-                "LatLong": "",
+                "LatLong": "-33.86803439076099, 151.20600980279704",
                 "Postal": "Town hall"
             },            
             "Oat": "Alt Dairy Co.",
