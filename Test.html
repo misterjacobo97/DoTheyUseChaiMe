@@ -124,10 +124,7 @@
   xhttp.open("GET", url, false);
   xhttp.send();
 
-  function MarkerFunction(Cafe){
-
-    var i;
-    for (i = 0; i < Cafe.length; i++){
+    for (var i = 0; i < Cafe.length; i++){
       
       var MilkOpt = ["</li>", "<li> <b>Oat: </b>", "<li> <b>Soy: </b>", "<li> <b>Almond: </b>"];
       var OatInfo = String(MilkOpt[1] + String(Cafe[i].Oat) + MilkOpt[0]);
@@ -139,10 +136,7 @@
 
       var CafeMarker = String('Cafe' + i + '=' + L.marker([String(Cafe.Address.LatLong[i])],{icon: goldIcon}).bindPopup(CafeInfo) + '<br>');
     
-    }
-
-  };
-
+    };
 
     /* Set up the initial map center and zoom level */
     var map = L.map('map', {
