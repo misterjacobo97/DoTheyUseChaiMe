@@ -115,7 +115,7 @@
         const response = JSON.parse(xhttp.responseText);
         console.log(response.Cafe.Address);
 
-          function MarkerFunction(){
+          function MarkerFunction(response){
 
           var i;
           for (var i = 0; i < response.Cafe.length; i++){
@@ -135,8 +135,6 @@
   };
   xhttp.open("GET", "CafeData.json", false);
   xhttp.send();
-
-  MarkerFunction(response);
 
 
 
