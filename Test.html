@@ -118,7 +118,6 @@
 
         var Cafe = response.Cafe;
 
-        MarkerFunction(Cafe);
           
         }
       };
@@ -140,10 +139,11 @@
 
       var CafeInfo = String('<p><h3><b>' + String(Cafe[i].Name) + '</b></h3>' + String(Cafe[i].ChaiMe.Stock) + '<ul> ' + OatInfo + SoyInfo + AlmondInfo + '</ul>' + '</p>');
 
-      var CafeMarker = L.marker([String(Cafe.Address.LatLong[i])],{icon: goldIcon}).bindPopup(CafeInfo);
-    }
+      var CafeMarker = String('Cafe' + i + '=' + L.marker([String(Cafe.Address.LatLong[i])],{icon: goldIcon}).bindPopup(CafeInfo) + <br>);
     
-    CafeMarker;
+      Cafemarker;
+    }
+
 
   };
 
