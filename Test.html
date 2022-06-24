@@ -118,6 +118,8 @@ xhttp.onreadystatechange = function() {
   xhttp.open("GET", "CafeData.json", true);
   xhttp.send();
 
+
+
     /* Set up the initial map center and zoom level */
     var map = L.map('map', {
       center: [-33.87196108839124, 151.21093596711813], // EDIT coordinates to re-center map
@@ -136,7 +138,7 @@ xhttp.onreadystatechange = function() {
   }).addTo(map);
 
     
-  L.control.layers(overlayMaps).addTo(map);
+  //L.control.layers(overlayMaps).addTo(map);
 
   /* Display a point marker with pop-up text
   L.marker([]).addTo(map) // EDIT marker coordinates
