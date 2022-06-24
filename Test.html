@@ -115,23 +115,28 @@
         const response = JSON.parse(xhttp.responseText);
         console.log(response.Cafe.Address);
 
-        for (var i = 0; i < response.Cafe.length; i++){
-          
-          var MilkOpt = ["</li>", "<li> <b>Oat: </b>", "<li> <b>Soy: </b>", "<li> <b>Almond: </b>"];
-          var OatInfo = String(MilkOpt[1] + String(response.Cafe.Oat(i)) + MilkOpt[0]);
-          var SoyInfo = String(MilkOpt[2] + String(response.Cafe.Soy(i)) + MilkOpt[0]);
-          var AlmondInfo = String(MilkOpt[3] + String(response.Cafe.Almond(i)) + MilkOpt[0]);
+          function MarkerFunction(){
+
+          var i;
+          for (var i = 0; i < response.Cafe.length; i++){
+            
+            var MilkOpt = ["</li>", "<li> <b>Oat: </b>", "<li> <b>Soy: </b>", "<li> <b>Almond: </b>"];
+            var OatInfo = String(MilkOpt[1] + String(response.Cafe.Oat(i)) + MilkOpt[0]);
+            var SoyInfo = String(MilkOpt[2] + String(response.Cafe.Soy(i)) + MilkOpt[0]);
+            var AlmondInfo = String(MilkOpt[3] + String(response.Cafe.Almond(i)) + MilkOpt[0]);
 
 
-          var CafeInfo = String('<p><h3><b>' + String(response.Cafe.Name(i)) + '</b></h3>' + String(Cafe.ChaiMe.Stock(i)) + '<ul> ' + OatInfo + SoyInfo + AlmondInfo + '</ul>' + '</p>');
+            var CafeInfo = String('<p><h3><b>' + String(response.Cafe.Name(i)) + '</b></h3>' + String(Cafe.ChaiMe.Stock(i)) + '<ul> ' + OatInfo + SoyInfo + AlmondInfo + '</ul>' + '</p>');
 
-          var CafeMarker = L.marker([String(response.Cafe.Address.LatLong(i))],{icon: goldIcon}).bindPopup(CafeInfo);
+            var CafeMarker = L.marker([String(response.Cafe.Address.LatLong(i))],{icon: goldIcon}).bindPopup(CafeInfo);
+          }
         }
-
       }
   };
   xhttp.open("GET", "CafeData.json", false);
   xhttp.send();
+
+  MarkerFunction(response);
 
 
 
